@@ -47,7 +47,6 @@ class ViewController: UIViewController, STPPaymentCardTextFieldDelegate, UITextV
   
   override func viewWillLayoutSubviews() {
     setupValueTextField()
-    //setupPaymentTextField()
   }
 
 
@@ -109,28 +108,5 @@ extension ViewController {
     valueTextField.layer.masksToBounds = true
   }
   
-  func setupPaymentTextField(){
-    let margins = creditCardView.layoutMarginsGuide
-    let border = CALayer()
-    let width = CGFloat(1.0)
-    border.borderColor = UIColor(red: 80.0/255.0, green: 227.0/255.0, blue: 194.0/255.0, alpha: 1.0).cgColor
-    border.frame = CGRect(x: 0, y: paymentField.frame.size.height - width, width:  paymentField.frame.size.width, height: paymentField.frame.size.height)
-    
-    border.borderWidth = width
-    paymentField.layer.addSublayer(border)
-    paymentField.layer.masksToBounds = true
-    
-    paymentField.textColor = UIColor.white
-    paymentField.cursorColor = UIColor(red: 80.0/255.0, green: 227.0/255.0, blue: 194.0/255.0, alpha: 1.0)
-    paymentField.placeholderColor = UIColor.white
-    
-    creditCardView.addSubview(paymentField)
-    paymentField.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-    paymentField.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-    paymentField.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
-    paymentField.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
-    paymentField.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-    paymentField.translatesAutoresizingMaskIntoConstraints = false
-  }
 }
 
