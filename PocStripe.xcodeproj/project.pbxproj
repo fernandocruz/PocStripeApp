@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		113380F81F316DE600F88083 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113380F71F316DE600F88083 /* Payment.swift */; };
 		11BFA9661F314FBE003CA851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFA9651F314FBE003CA851 /* AppDelegate.swift */; };
 		11BFA9681F314FBE003CA851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BFA9671F314FBE003CA851 /* ViewController.swift */; };
 		11BFA96B1F314FBE003CA851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BFA9691F314FBE003CA851 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		061E2FE42AAAC1B940DD388B /* Pods-PocStripe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocStripe.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocStripe/Pods-PocStripe.release.xcconfig"; sourceTree = "<group>"; };
+		113380F71F316DE600F88083 /* Payment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		11BFA9621F314FBE003CA851 /* PocStripe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocStripe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11BFA9651F314FBE003CA851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11BFA9671F314FBE003CA851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				11BFA96C1F314FBE003CA851 /* Assets.xcassets */,
 				11BFA96E1F314FBE003CA851 /* LaunchScreen.storyboard */,
 				11BFA9711F314FBE003CA851 /* Info.plist */,
+				113380F71F316DE600F88083 /* Payment.swift */,
 			);
 			path = PocStripe;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BFA9681F314FBE003CA851 /* ViewController.swift in Sources */,
+				113380F81F316DE600F88083 /* Payment.swift in Sources */,
 				11BFA9661F314FBE003CA851 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +383,7 @@
 				11BFA9761F314FBE003CA851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

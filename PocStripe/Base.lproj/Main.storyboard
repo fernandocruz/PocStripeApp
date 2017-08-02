@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PocStripe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGa-7s-ovn">
+                                <rect key="frame" x="74" y="344" width="227" height="38"/>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <state key="normal" title="TOP UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="topupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uFy-7O-SMU"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fen-74-SHF">
+                                <rect key="frame" x="0.0" y="260.5" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.24313725489999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hvu-WU-CBa"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, How much do you want to TOP UP ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWk-ZQ-y79">
+                                <rect key="frame" x="26" y="46" width="333" height="67.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y7k-RN-3Od">
+                                <rect key="frame" x="26" y="134" width="307" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="O5P-Ci-50A"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Information" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8h-cC-2Cb">
+                                <rect key="frame" x="26" y="220" width="333" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.24313725490196078" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T8h-cC-2Cb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="2uF-9n-S6W"/>
+                            <constraint firstItem="Y7k-RN-3Od" firstAttribute="top" secondItem="dWk-ZQ-y79" secondAttribute="bottom" constant="20.5" id="3G9-V2-rUQ"/>
+                            <constraint firstItem="Y7k-RN-3Od" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="6KW-UA-Pvu"/>
+                            <constraint firstItem="Fen-74-SHF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zj-uY-XIz"/>
+                            <constraint firstItem="eGa-7s-ovn" firstAttribute="top" secondItem="Fen-74-SHF" secondAttribute="bottom" constant="23.5" id="Hne-41-ptV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y7k-RN-3Od" secondAttribute="trailing" constant="26" id="K6m-be-Y6L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T8h-cC-2Cb" secondAttribute="trailing" id="O6r-GZ-AV8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dWk-ZQ-y79" secondAttribute="trailing" id="OU5-Vf-NtZ"/>
+                            <constraint firstItem="dWk-ZQ-y79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="X7H-KD-gAL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eGa-7s-ovn" secondAttribute="trailing" constant="58" id="bvH-1t-5vR"/>
+                            <constraint firstItem="Fen-74-SHF" firstAttribute="top" secondItem="T8h-cC-2Cb" secondAttribute="bottom" constant="16.5" id="dYI-ZN-sty"/>
+                            <constraint firstItem="Fen-74-SHF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-43" id="dzG-PH-WCk"/>
+                            <constraint firstAttribute="trailing" secondItem="Fen-74-SHF" secondAttribute="trailing" id="fMo-qV-yve"/>
+                            <constraint firstItem="Fen-74-SHF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kyF-Mp-eOv"/>
+                            <constraint firstItem="eGa-7s-ovn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="oQM-Wi-tbH"/>
+                            <constraint firstItem="dWk-ZQ-y79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="oZJ-2e-H2m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="creditCardView" destination="Fen-74-SHF" id="7eb-yT-GJv"/>
+                        <outlet property="valueTextField" destination="Y7k-RN-3Od" id="dvE-Mm-0GV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
